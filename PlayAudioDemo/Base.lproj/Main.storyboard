@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayAudioDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XRZ-hO-RG7">
+                                <rect key="frame" x="113" y="433" width="188" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nw-5Q-T8a">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="Rewire"/>
+                                        <connections>
+                                            <action selector="rewire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANN-8F-m7d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2a-tR-rUo">
+                                        <rect key="frame" x="77" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3y-oP-dsz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j26-c3-duZ">
+                                        <rect key="frame" x="137" y="0.0" width="51" height="30"/>
+                                        <state key="normal" title="Foward"/>
+                                        <connections>
+                                            <action selector="foward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhj-v0-jcr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5W-Qe-NzL">
+                                <rect key="frame" x="20" y="347" width="33" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41X-iD-xvg">
+                                <rect key="frame" x="361" y="347" width="33" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Un1-Lr-NeT" customClass="SliderView" customModule="PlayAudioDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="303" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fkk-Cp-hUF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Un1-Lr-NeT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ErW-1Z-obz"/>
+                            <constraint firstItem="41X-iD-xvg" firstAttribute="top" secondItem="Un1-Lr-NeT" secondAttribute="bottom" constant="14" id="OnA-Ud-N9R"/>
+                            <constraint firstItem="Un1-Lr-NeT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZLX-0W-uaK"/>
+                            <constraint firstItem="N5W-Qe-NzL" firstAttribute="leading" secondItem="Un1-Lr-NeT" secondAttribute="leading" id="mUZ-lv-CVh"/>
+                            <constraint firstItem="XRZ-hO-RG7" firstAttribute="top" secondItem="Un1-Lr-NeT" secondAttribute="bottom" constant="100" id="mzJ-di-amD"/>
+                            <constraint firstItem="N5W-Qe-NzL" firstAttribute="top" secondItem="Un1-Lr-NeT" secondAttribute="bottom" constant="14" id="nCj-y2-dRJ"/>
+                            <constraint firstItem="XRZ-hO-RG7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o0X-wZ-KBK"/>
+                            <constraint firstItem="XRZ-hO-RG7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rb0-7W-87l"/>
+                            <constraint firstItem="41X-iD-xvg" firstAttribute="trailing" secondItem="Un1-Lr-NeT" secondAttribute="trailing" id="zQN-0f-1CR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="N5W-Qe-NzL" id="mD5-GG-nSY"/>
+                        <outlet property="durationLabel" destination="41X-iD-xvg" id="gFt-Ex-Xgb"/>
+                        <outlet property="fowardButton" destination="j26-c3-duZ" id="MXS-RG-5op"/>
+                        <outlet property="playButton" destination="Y2a-tR-rUo" id="G4W-PJ-bye"/>
+                        <outlet property="rewireButton" destination="0Nw-5Q-T8a" id="NN1-J8-ksI"/>
+                        <outlet property="sliderView" destination="Un1-Lr-NeT" id="1eD-wU-sl1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="110"/>
+        </scene>
+    </scenes>
+</document>
